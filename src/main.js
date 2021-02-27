@@ -7,13 +7,14 @@ import router from "./router.js"
 import stores from "./store";
 
 //import msgContainer from "@/components/msgContainer";
-
+import color from "./color.js"
 Vue.use(Vuex)
 Vue.use(ElementUI);
 
 const store = new Vuex.Store(stores)
 
 Vue.config.productionTip = false
+Vue.prototype.Color = color
 
 // Vue.component(
 //     msgContainer.name,

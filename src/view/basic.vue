@@ -15,7 +15,7 @@ export default {
       waitTime: 3,
       time: null,
       mountedDate: null,
-      waitColor:['coral','#f5a212','#f8c874','moccasin'],
+      waitColor:[this.Color.RUN_DEFAULT, ...this.Color.WAITS],
     };
   },
   mounted() {
@@ -24,20 +24,19 @@ export default {
   },
   methods: {
     repeatTimeout() {
-      let me = this;
       setTimeout(() => {
         if (this.waitTime > 0) {
           this.waitTime--;
         }else{
           this.number++;
         }
-        me.repeatTimeout();
+        this.repeatTimeout();
         },
         1000 - new Date().getTime()%1000)
     },
   },
   beforeDestroy() {
-    clearInterval(this.time)
+
   }
 }
 </script>
@@ -57,7 +56,5 @@ export default {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: coral;
-
 }
 </style>

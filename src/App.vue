@@ -16,7 +16,7 @@
             :index="firstNode.path"
         >
           <template slot="title">{{ firstNode.name }}</template>
-          <el-menu-item v-if="!!firstNode.component"
+          <el-menu-item v-if="!!firstNode.component && firstNode.show"
               :key="firstNode.path"
               :index="firstNode.path">{{ firstNode.name }}
           </el-menu-item>
