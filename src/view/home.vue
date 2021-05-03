@@ -9,7 +9,7 @@
   </msgContainer>
 </template>
 <script>
-import msgContainer from "@/components/msgContainer";
+import msgContainer from "@/components/MsgContainer";
 export default {
   components:{msgContainer}
   ,
